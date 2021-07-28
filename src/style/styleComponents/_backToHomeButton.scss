@@ -1,0 +1,16 @@
+.backHomeButton {
+  background: $blackColor;
+  border: none;
+  margin-top: 50px;
+  border-radius: $borderRadius;
+  padding: 0 50px;
+  height: 30px;
+  color: $primaryYellowColor;
+  font-size: 17px;
+  &:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 6px 4px $primaryYellowColor;
+    -moz-box-shadow: 0 0 6px 4px $primaryYellowColor;
+    box-shadow: 0 0 6px 4px $primaryYellowColor;
+  }
+}

@@ -1,0 +1,16 @@
+@keyframes notExistStarship {
+  from {
+    color: $blackColor;
+  }
+  to {
+    color: $primaryYellowColor;
+  }
+}
+/* The element to apply the animation to */
+.notFound {
+  margin-top: 80px;
+  font-size: 30px;
+  color: $primaryYellowColor;
+  animation-name: notExistStarship;
+  animation-duration: 16s;
+}

@@ -1,0 +1,79 @@
+@import "../styleComponents/header";
+@import "../styleComponents/card";
+@import "../styleComponents/notFound";
+
+@mixin pageGridStructure($gridRepeatNumber) {
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: repeat($gridRepeatNumber, 1fr);
+}
+.gridStructure {
+  @include pageGridStructure(4);
+}
+.searchArea {
+  background-color: $blackColor;
+  height: 40px;
+  margin-top: 0;
+  justify-content: center;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  .searchButton {
+    background: $blackColor;
+    border: none;
+    border-radius: 20px;
+    padding: 0 50px;
+    height: 28px;
+    color: $primaryYellowColor;
+    border: 3px solid $primaryYellowColor;
+    margin-top: 5px;
+    font-size: 17px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  input {
+    border-radius: 30px;
+    border: none;
+    margin-top: 5px;
+    outline: none;
+    background-color: white;
+    font-family: $font-family;
+    font-size: 15px;
+    height: 28px;
+    width: 300px;
+    padding: 0 10px;
+    &::placeholder {
+      color: $blackColor;
+      font-size: 15px;
+      font-family: $font-family;
+    }
+  }
+}
+@media screen and (min-width: 1580px) {
+  .gridStructure {
+    @include pageGridStructure(5);
+  }
+}
+@media screen and (max-width: 1300px) {
+  .gridStructure {
+    @include pageGridStructure(3);
+  }
+}
+@media screen and (max-width: 950px) {
+  .gridStructure {
+    @include pageGridStructure(2);
+  }
+}
+@media screen and (max-width: 650px) {
+  .gridStructure {
+    @include pageGridStructure(1);
+  }
+  .searchButton {
+    padding: 0 10px !important;
+  }
+  input {
+    width: 210px !important;
+    padding: 0 10px;
+  }
+}

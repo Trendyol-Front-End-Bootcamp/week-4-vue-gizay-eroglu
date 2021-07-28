@@ -1,0 +1,36 @@
+.card {
+  margin: auto;
+  margin-bottom: 30px;
+  width: 300px;
+  height: 300px;
+  border-radius: $borderRadius;
+  text-align: start;
+  background-color: $whiteColor;
+  p {
+    padding-left: 10px;
+    font-size: 17px;
+    font-family: $font-family;
+    span {
+      font-weight: 700;
+    }
+  }
+  img {
+    border-top-right-radius: $borderRadius;
+    border-top-left-radius: $borderRadius;
+    width: 300px;
+  }
+  &:hover {
+    cursor: pointer;
+    width: 320px;
+    img {
+      width: 320px;
+    }
+    -webkit-box-shadow: 0 0 6px 4px $primaryYellowColor;
+    -moz-box-shadow: 0 0 6px 4px $primaryYellowColor;
+    box-shadow: 0 0 6px 4px $primaryYellowColor;
+  }
+}
+.router-link {
+  text-decoration: none;
+  color: $blackColor !important;
+}
