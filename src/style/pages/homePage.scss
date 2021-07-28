@@ -4,7 +4,7 @@
 
 @mixin pageGridStructure($gridRepeatNumber) {
   display: grid;
-  margin-top: 50px;
+  margin-top: 70px;
   grid-template-columns: repeat($gridRepeatNumber, 1fr);
 }
 .gridStructure {
@@ -76,4 +76,10 @@
     width: 210px !important;
     padding: 0 10px;
   }
+}
+
+.shipsLoading{
+    margin-top: 80px;
+  font-size: 30px;
+  color: $primaryYellowColor;
 }

@@ -18,6 +18,9 @@
         :starship="starship"
       />
     </div>
+    <div v-else-if="isLoading==true" class="shipsLoading">
+      Ships Loading . . 
+    </div>
     <div v-else>
       <NotFound />
     </div>
@@ -43,6 +46,7 @@ export default {
 
   data() {
     return {
+      isLoading:true,
       starships: [],
       params: {},
     };
@@ -50,8 +54,9 @@ export default {
   methods: {
     async getAllStarships(params) {
       const response = await axios.get(`${URL}`, { params });
-
+      
       if (response.status === 200 && response.data.results.length > 0) {
+        this.isLoading=false;
         return response.data.results;
       } else {
         return [];
