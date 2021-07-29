@@ -11,7 +11,7 @@
       />
       <button @click="filterStarships" class="searchButton">Search</button>
     </div>
-    <div v-if="starships.length > 0" class="gridStructure">
+    <div v-if="starships.length > 0" class="cardContainer">
       <Card
         v-for="(starship, index) in starships"
         :key="index"
@@ -37,13 +37,11 @@ const URL = "https://swapi.dev/api/starships/";
 
 export default {
   name: "Home",
-
   components: {
     Header,
     Card,
     NotFound,
   },
-
   data() {
     return {
       isLoading:true,

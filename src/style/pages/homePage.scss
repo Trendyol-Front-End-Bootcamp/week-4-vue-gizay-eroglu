@@ -3,13 +3,13 @@
 @import "../styleComponents/card";
 @import "../styleComponents/notFound";
 
-@mixin pageGridStructure($gridRepeatNumber) {
+@mixin cardContainerStructure($gridRepeatNumber) {
   display: grid;
   margin-top: 70px;
   grid-template-columns: repeat($gridRepeatNumber, 1fr);
 }
-.gridStructure {
-  @include pageGridStructure(4);
+.cardContainer {
+  @include cardContainerStructure(4);
 }
 .searchArea {
   background-color: $blackColor;
@@ -52,23 +52,23 @@
   }
 }
 @media screen and (min-width: 1580px) {
-  .gridStructure {
-    @include pageGridStructure(5);
+  .cardContainer {
+    @include cardContainerStructure(5);
   }
 }
 @media screen and (max-width: 1300px) {
-  .gridStructure {
-    @include pageGridStructure(3);
+  .cardContainer {
+    @include cardContainerStructure(3);
   }
 }
 @media screen and (max-width: 950px) {
-  .gridStructure {
-    @include pageGridStructure(2);
+  .cardContainer {
+    @include cardContainerStructure(2);
   }
 }
 @media screen and (max-width: 650px) {
-  .gridStructure {
-    @include pageGridStructure(1);
+  .cardContainer {
+    @include cardContainerStructure(1);
   }
   .searchButton {
     padding: 0 10px !important;
@@ -78,9 +78,8 @@
     padding: 0 10px;
   }
 }
-
-.shipsLoading{
-    margin-top: 80px;
+.shipsLoading{ /* starship loading text */
+  margin-top: 80px;
   font-size: 30px;
   color: $primaryYellowColor;
 }
