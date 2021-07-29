@@ -1,4 +1,4 @@
-.pageDiv {
+.cardDetailContainer {
   display: flex;
   justify-content: center;
   margin: 50px;
@@ -21,7 +21,7 @@
       }
     }
   }
-  .cardDetailPageImg {
+  img {
     border-bottom-left-radius: $borderRadius;
     border-top-left-radius: $borderRadius;
     height: 350px;
@@ -30,8 +30,8 @@
 @media screen and (max-width: 1200px) {
   .cardDetail {
     height: auto;
-  }
-  .cardDetailPageImg {
+    img {
     display: none;
+  }
   }
 }

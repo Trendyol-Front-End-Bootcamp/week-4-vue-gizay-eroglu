@@ -1,11 +1,7 @@
 <template>
-  <div class="pageDiv">
+  <div class="cardDetailContainer">
     <div class="cardDetail">
-      <img
-        src="../assets/starship.jpg"
-        alt="Starship"
-        class="cardDetailPageImg"
-      />
+      <img src="../assets/starship.jpg" alt="Starship"/>
       <div class="cardText">
         <p>
           <span>Name:</span>

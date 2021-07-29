@@ -42,5 +42,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../style/style.scss";
+@import "../style/pages/cardDetailPage.scss";
 </style>
